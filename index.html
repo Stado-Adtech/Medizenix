@@ -838,6 +838,7 @@ fileInput.addEventListener("change", function () {
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
 
+  statusBox.style.color = "black";
   statusBox.textContent = "Sending enquiry...";
 
   const formData = new FormData(form);
@@ -864,6 +865,7 @@ form.addEventListener("submit", async function(e) {
     statusBox.textContent = "Server error. Please try again.";
   }
 });
+
 
 // WhatsApp button
 function sendWhatsApp() {

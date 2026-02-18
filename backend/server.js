@@ -5,7 +5,9 @@ const multer = require("multer");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const upload = multer({ dest: "uploads/" });
+
+// Use memory storage (important for Vercel)
+const upload = multer({ storage: multer.memoryStorage() });
 
 app.use(cors());
 
@@ -38,19 +40,22 @@ City: ${city}
 Requirement:
 ${message}
       `,
-      attachments: file ? [
-        { filename: file.originalname, path: file.path }
-      ] : []
+      attachments: file
+        ? [
+            {
+              filename: file.originalname,
+              content: file.buffer
+            }
+          ]
+        : []
     });
 
     res.json({ success: true });
   } catch (err) {
     console.error("Mail error:", err);
-    res.status(500).json({ success: false });
+    res.status(500).json({ success: false, error: "Mail failed" });
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Backend running on http://localhost:${PORT}`);
-});
+// Export for Vercel
+module.exports = app;
