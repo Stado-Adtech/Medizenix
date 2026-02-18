@@ -375,12 +375,13 @@ fileInput.addEventListener("change", function () {
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
 
+  statusBox.style.color = "black";
   statusBox.textContent = "Sending enquiry...";
 
   const formData = new FormData(form);
 
   try {
-    const res = await fetch("http://localhost:3000/api/enquiry", {
+    const res = await fetch("https://medizenix-backend.vercel.app/api/enquiry", {
       method: "POST",
       body: formData
     });
@@ -401,6 +402,7 @@ form.addEventListener("submit", async function(e) {
     statusBox.textContent = "Server error. Please try again.";
   }
 });
+
 
 // WhatsApp button
 function sendWhatsApp() {
