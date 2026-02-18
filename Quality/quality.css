@@ -1,0 +1,202 @@
+
+
+/* ===== Banner ===== */
+.quality-banner {
+  min-height: 320px;
+  background: linear-gradient(135deg, #0560ab, #0560ab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.quality-banner h1 {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+
+.quality-banner p {
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.95;
+  font-size: 16px;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+.quality-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: 26px;
+}
+
+.section-title span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.mini-card {
+  background: #f9fbff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.mini-card h4 {
+  margin-bottom: 8px;
+}
+
+/* ===== Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+  padding-left: 22px;
+  position: relative;
+  font-size: 15px;
+}
+
+ul li::before {
+ 
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* ===== Highlight ===== */
+.highlight {
+  margin-top: 16px;
+  background: #f0f9ff;
+  border-left: 4px solid #0a6cff;
+  padding: 14px;
+  border-radius: 8px;
+  color: #0c4a6e;
+  font-size: 14px;
+}
+
+/* ===== Table ===== */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  text-align: left;
+}
+
+.info-table th {
+  background: #f1f5f9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .quality-banner h1 {
+    font-size: 34px;
+  }
+
+  .quality-banner p {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 40px 16px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .quality-banner {
+    min-height: 240px;
+    padding: 40px 16px;
+  }
+
+  .quality-banner h1 {
+    font-size: 26px;
+  }
+
+  .quality-banner p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 30px 14px;
+  }
+
+  .section-title h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .mini-card {
+    padding: 16px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  .info-table th,
+  .info-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .quality-banner h1 {
+    font-size: 22px;
+  }
+
+  .quality-banner p {
+    font-size: 13px;
+  }
+}
