@@ -282,7 +282,7 @@
 
 .service-right {
   flex-direction: row-reverse;
-  margin-left: 80px; /* offset look */
+  /* margin-left: 80px; offset look */
 }
 
 /* Icon circle */
